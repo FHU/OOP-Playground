@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_Playground
 {
-    class Character
+    class Character: BaseStarWarsObject
     {
         public Character(string FirstName="", string LastName="")
         {
@@ -28,12 +28,11 @@ namespace OOP_Playground
             }
         }
 
-        public string LastName { get; set; }
+        public string LastName { get; set; } 
 
         public string SkinColor { get;  set; }
 
-        public string HomeWorld { get; set; }
-
+        public Planet HomeWorld { get; set; }
 
     }
 }

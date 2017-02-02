@@ -14,26 +14,19 @@ namespace OOP_Playground
             Planet p = new Planet();
             p.Type = PlanetType.Desert;
 
-            Console.WriteLine(p );
+            Planet h = new Planet();
+            Planet t = Planet.CreateTatooine();
 
-            /*string s = "  Kenan Ca se y  ";
+            Vehicle v = new Vehicle() { Affiliation = Affiliation.Rebellion, Height=35.2, Model="X-Wing"};
 
-            string modifiedS = s.Replace(" ", "");
-            int letterCount = modifiedS.Length;
+            BaseStarWarsObject b = new Planet();
 
-            byte b;
-            sbyte sb;
+            SpaceVehicle cruiser = new SpaceVehicle();
+            cruiser.MovieAppearances.Add(new Movie() { Title = "A New Hope" });
 
-            short sh;
-            ushort ush;
+            Console.WriteLine(p);
 
-            int i;
-            uint intcount = 0;
-
-            long l;
-            ulong count = 0;
-
-            Console.WriteLine(modifiedS);*/
+            Console.WriteLine(Planet.NumberOfPlanets);
 
             Console.ReadKey();
         }
