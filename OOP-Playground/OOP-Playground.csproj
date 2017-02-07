@@ -46,6 +46,8 @@
     <Compile Include="BaseStarWarsObject.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="GroundVehicle.cs" />
+    <Compile Include="IAppearable.cs" />
+    <Compile Include="ILikeable.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="Planet.cs" />
     <Compile Include="Program.cs" />

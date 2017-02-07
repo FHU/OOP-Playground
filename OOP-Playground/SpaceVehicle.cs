@@ -14,5 +14,12 @@ namespace OOP_Playground
 
         public int MaxAtmosphericSpeed { get; set; }
 
+
+        public override void Move()
+        {
+            //Do something...
+        }
+
+
     }
 }

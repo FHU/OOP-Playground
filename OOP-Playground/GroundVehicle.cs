@@ -10,5 +10,15 @@ namespace OOP_Playground
     {
         public int MaxSpeed { get; set; }
 
+        public override void Refuel()
+        {
+            FuelStores += 200;
+        }
+
+        public override void Move()
+        {
+            //Do something...
+        }
+
     }
 }

@@ -11,11 +11,14 @@ namespace OOP_Playground
         Rebellion, GalacticEmpire, Neutral, GalacticRepublic, Resistance, FirstOrder
     }
 
-    class Vehicle: BaseStarWarsObject
+    abstract class  Vehicle: IAppearable
     {
+
+        protected int FuelStores;
 
         public Vehicle()
         {
+            MovieAppearances = new List<Movie>();
         }
 
         public Affiliation Affiliation { get; set; }
@@ -26,5 +29,29 @@ namespace OOP_Playground
 
         public int CrewSize { get; set; }
 
+        public List<Movie> MovieAppearances
+        {
+            get;
+
+            set;
+        }
+
+        public virtual void Refuel()
+        {
+            FuelStores += 1000;
+        }
+
+        public abstract void Move();
+
+
+        public override string ToString()
+        {
+            return $"{Model}: {Affiliation}, Crew Size: {CrewSize}, Height: {Height}";
+        }
+
+        public int NumberOfAppearances()
+        {
+            return MovieAppearances.Count +2 ;
+        }
     }
 }

@@ -8,11 +8,12 @@ namespace OOP_Playground
 {
     public enum PlanetType {Desert, Forest, Gas, Ice, Swamp }
     
-    class Planet : BaseStarWarsObject
+    class Planet : IAppearable
     {
         public Planet()
         {
             NumberOfPlanets++;
+            MovieAppearances = new List<Movie>();
         }
 
         public static Planet CreateTatooine()
@@ -28,9 +29,21 @@ namespace OOP_Playground
 
         public static int NumberOfPlanets { get; set; }
 
+        public List<Movie> MovieAppearances
+        {
+            get;
+
+            set;
+        }
+
         public override string ToString()
         {
             return $"{Name}, {Diameter}m, {Type}";
+        }
+
+        public int NumberOfAppearances()
+        {
+            return MovieAppearances.Count;
         }
 
     }
